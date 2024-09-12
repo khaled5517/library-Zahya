@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library Zahye</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Zahye مكتبة</h1>
+        <p>اكتشف عالم الكتب</p>
+    </header>
+
+    <section class="intro">
+        <h2>مرحبًا بك في مكتبتنا</h2>
+        <p>استكشف مجموعتنا المتنوعة من الكتب في مختلف المجالات.</p>
+        <a href="#categories" class="cta">استكشف الآن</a>
+    </section>
+
+    <section id="categories" class="books">
+        <h2>أقسام الكتب المميزة</h2>
+        <div class="categories">
+            <a href="#religious" class="category">كتب دينية</a>
+            <a href="#stories" class="category">كتب قصص</a>
+            <a href="#educational" class="category">كتب تعليمية</a>
+        </div>
+    </section>
+
+    <section id="religious" class="book-category">
+        <h3>كتب دينية</h3>
+        <div class="book-grid">
+            <div class="book">
+                <h3>القرآن الكريم</h3>
+            </div>
+            <div class="book">
+                <h3>سيرة الرسول</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="stories" class="book-category">
+        <h3>كتب قصص</h3>
+        <div class="book-grid">
+            <div class="book">
+                <h3>قصص حب</h3>
+            </div>
+            <div class="book">
+                <h3>حكايات شعبية</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="educational" class="book-category">
+        <h3>كتب تعليمية</h3>
+        <div class="book-grid">
+            <div class="book">
+                <h3>تعلم البرمجة</h3>
+            </div>
+            <div class="book">
+                <h3>الرياضيات المبسطة</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 Zahye مكتبة</p>
+    </footer>
+
+    <script>
+        // Scroll smoothly to sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
